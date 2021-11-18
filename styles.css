@@ -1,0 +1,9 @@
+body {
+	display: flex;
+	align-items: center;
+	background-color: #e0c590;
+}
+
+img {
+	margin: auto;
+}
