@@ -21,3 +21,15 @@ body {
 .contact-header {
   text-align: center;
 }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: solid 1px;
+}
+
+.contact-form-item {
+  display: flex;
+  flex-direction: column;
+}
