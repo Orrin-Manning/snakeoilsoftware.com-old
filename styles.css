@@ -30,6 +30,7 @@ body {
 .contact-form-fields {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contact-form-item {
