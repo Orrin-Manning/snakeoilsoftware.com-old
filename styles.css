@@ -26,6 +26,11 @@ body {
   border: solid 1px;
 }
 
+.contact-form-fields {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .contact-form-item {
   display: flex;
   flex-direction: column;
