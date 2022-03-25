@@ -31,11 +31,12 @@ body {
 .short-inputs-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
   justify-content: center;
+  gap: 1rem;
 }
 
 .contact-form-item {
   display: flex;
   flex-direction: column;
+  flex-basis: 100%;
 }
