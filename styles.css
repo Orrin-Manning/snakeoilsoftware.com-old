@@ -55,3 +55,13 @@ p, label {
   font-size: 16px;
   height: 1.75rem;
 }
+
+.contact-submit-btn {
+  font-size: 16px;
+  padding: 0.5rem 1.5rem;
+  border-width: 2px;
+  border-radius: 0.25rem;
+  color:#bc2020;
+  background-color: #0a0a0a;
+  border-color: #bc2020;
+}
