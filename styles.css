@@ -35,7 +35,9 @@ p, label {
   align-items: center;
   gap: 1rem;
   padding: 10px;
+  background-color: #111111;
   border: solid 1px #bc6e20;
+  border-radius: 0.25rem;
 }
 
 .short-inputs-container {
@@ -53,7 +55,11 @@ p, label {
 
 .contact-form-item input {
   font-size: 16px;
-  height: 1.75rem;
+  min-height: 1.75rem;
+  border: solid 1px #ede9bd;
+  border-radius: 0.25rem;
+  color: #ede9bd;
+  background-color: #0a0a0a;
 }
 
 .contact-submit-btn {
