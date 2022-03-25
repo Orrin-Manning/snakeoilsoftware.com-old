@@ -25,6 +25,10 @@ p, label {
   color: #bc6e20;
 }
 
+.contact-dialogue {
+  text-align: center;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
