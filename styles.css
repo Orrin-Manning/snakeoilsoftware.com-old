@@ -16,6 +16,7 @@ p, label {
 }
 
 .site-header {
+  font-family: "Rye", cursive;
   text-align: center;
   color: #bc2020;
 }
