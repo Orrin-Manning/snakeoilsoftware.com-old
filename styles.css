@@ -1,5 +1,9 @@
 body {
-	background-color: #e0c590;
+	background-color: #0a0a0a;
+}
+
+p, label {
+  color: #ede9bd;
 }
 
 #site-nav ul {
@@ -13,10 +17,12 @@ body {
 
 .site-header {
   text-align: center;
+  color: #bc2020;
 }
 
 .contact-header {
   text-align: center;
+  color: #bc6e20;
 }
 
 .contact-form {
@@ -25,7 +31,7 @@ body {
   align-items: center;
   gap: 1rem;
   padding: 10px;
-  border: solid 1px;
+  border: solid 1px #bc6e20;
 }
 
 .short-inputs-container {
