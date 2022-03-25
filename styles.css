@@ -27,7 +27,7 @@ body {
   border: solid 1px;
 }
 
-.contact-form-fields {
+.short-inputs-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
