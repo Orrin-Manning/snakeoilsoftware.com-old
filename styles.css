@@ -41,7 +41,8 @@ p, label {
   border-radius: 0.25rem;
 }
 
-.short-inputs-container {
+.contact-form-fields {
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
