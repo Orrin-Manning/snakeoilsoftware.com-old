@@ -55,13 +55,17 @@ p, label {
   flex-basis: 100%;
 }
 
-.contact-form-item input {
+.contact-form-input {
   font-size: 16px;
   min-height: 1.75rem;
   border: solid 1px #ede9bd;
   border-radius: 0.25rem;
   color: #ede9bd;
   background-color: #0a0a0a;
+}
+
+.big-input {
+  height: 7rem;
 }
 
 .contact-submit-btn {
