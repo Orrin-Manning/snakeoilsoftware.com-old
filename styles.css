@@ -65,7 +65,7 @@ p, label {
 }
 
 .big-input {
-  height: 7rem;
+  min-height: 7rem;
 }
 
 .contact-submit-btn {
