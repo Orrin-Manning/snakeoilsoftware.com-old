@@ -9,7 +9,9 @@
 </head>
 
 <body>
-  <h1 class="site-header">Snake Oil Software</h1>
+  <?php
+    include_once 'scripts/header.php';
+  ?>
   <h2>Affordable Software Development</h2>
   <ul class="site-nav">
     <li>

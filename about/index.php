@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rye">
 </head>
 <body>
-  <h1 class="site-header">Snake Oil Software</h1>
+  <?php
+    include_once '../scripts/header.php';
+  ?>
   <main>
     <section>
       <h2>Who We Are</h2>

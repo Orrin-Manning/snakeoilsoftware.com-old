@@ -9,7 +9,9 @@
 </head>
 
 <body>
-  <h1 class="site-header">Snake Oil Software</h1>
+  <?php
+    include_once '../scripts/header.php';
+  ?>
   <main>
     <h2 class="contact-header serif">Contact Us</h2>
     <section>
