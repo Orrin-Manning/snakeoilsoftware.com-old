@@ -29,6 +29,11 @@ a:link, a:visited {
   color: #bc2020;
 }
 
+.site-header a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .contact-header {
   text-align: center;
   color: #bc6e20;
