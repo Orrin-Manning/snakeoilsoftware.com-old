@@ -77,10 +77,6 @@ a:link, a:visited {
   background-color: #0a0a0a;
 }
 
-.big-input {
-  min-height: 7rem;
-}
-
 .contact-submit-btn {
   font-size: 16px;
   padding: 0.5rem 1.5rem;

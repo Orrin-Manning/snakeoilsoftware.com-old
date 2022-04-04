@@ -20,7 +20,7 @@
       <label class="serif" for="description">
         Please provide a brief description of the development needs for your organization:
       </label>
-      <textarea class="contact-form-input big-input" id="description" type="text" name="description" form="contact-form"></textarea>
+      <textarea class="contact-form-input big-input" id="description" type="text" name="description" rows="5" form="contact-form"></textarea>
     </li>
   </ul>
   <button class="contact-submit-btn" type="submit">Submit</button>
