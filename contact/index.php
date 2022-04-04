@@ -1,7 +1,7 @@
 <?php
 $title = 'Contact Us';
 $author = 'Orrin Manning';
-include_once '../scripts/header.php';
+include_once '../header.php';
 ?>
 <main>
   <h2 class="contact-header serif">Contact Us</h2>

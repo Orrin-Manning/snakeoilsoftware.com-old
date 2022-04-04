@@ -1,7 +1,7 @@
 <?php
 $title = 'About Snake Oil Software';
 $author = 'Orrin Manning';
-include_once '../scripts/header.php';
+include_once '../header.php';
 ?>
 <main>
   <section>
