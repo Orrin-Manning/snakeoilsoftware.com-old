@@ -1,12 +1,8 @@
 <form class="contact-form" id="contact-form">
   <ul class="contact-form-fields">
     <li class="contact-form-item">
-      <label class="serif" for="first-name">First Name:</label>
-      <input class="contact-form-input" id="first-name" type="text" name="first-name" form="contact-form">
-    </li>
-    <li class="contact-form-item">
-      <label class="serif" for="last-name">Last Name:</label>
-      <input class="contact-form-input" id="last-name" type="text" name="last-name" form="contact-form">
+      <label class="serif" for="name">Name:</label>
+      <input class="contact-form-input" id="name" type="text" name="name" form="contact-form">
     </li>
     <li class="contact-form-item">
       <label class="serif" for="email">Email Address:</label>
