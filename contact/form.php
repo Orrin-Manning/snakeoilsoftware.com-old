@@ -1,4 +1,4 @@
-<form class="contact-form" id="contact-form">
+<form action="includes/form.inc.php" method="POST" class="contact-form" id="contact-form">
   <label for="name">Name:</label>
   <input class="contact-form-input" id="name" type="text" name="name" form="contact-form">
   <label for="email">Email Address:</label>
