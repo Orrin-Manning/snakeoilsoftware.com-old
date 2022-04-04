@@ -4,7 +4,7 @@ $author = 'Orrin Manning';
 include_once '../header.php';
 ?>
 <main>
-  <h2 class="contact-header serif">Contact Us</h2>
+  <h1 class="contact-header serif">Contact Us</h1>
   <section>
     <p class="contact-dialogue serif">
       Due to the varied technological needs of our clients, service will be
