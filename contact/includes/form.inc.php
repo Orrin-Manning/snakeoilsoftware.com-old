@@ -1,7 +1,4 @@
 <?php
-// Get connection to the database
-include 'dbh.inc.php';
-
 // Guard against missing form submission
 if (!isset($_POST['submit']))
 {
@@ -9,4 +6,5 @@ if (!isset($_POST['submit']))
   exit();
 }
 
-
+// Get connection to the database
+include 'dbh.inc.php';
