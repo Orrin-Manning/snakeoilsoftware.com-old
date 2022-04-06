@@ -2,9 +2,11 @@
 // Get connection to the database
 include 'dbh.inc.php';
 
-// Verify that this page was reached appropriately
+// Guard against missing form submission
 if (!isset($_POST['submit']))
 {
   header('location: /contact/');
   exit();
 }
+
+
