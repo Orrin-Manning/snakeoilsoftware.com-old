@@ -7,3 +7,12 @@ function emptyForm($name, $email, $organization, $role, $description)
   }
   return false;
 }
+
+function invalidEmail($email)
+{
+  if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+  {
+    return true;
+  }
+  return false;
+}

@@ -23,5 +23,12 @@ if (emptyForm($name, $email, $organization, $role, $description))
   exit();
 }
 
+// Guard against invalid email address
+if (invalidEmail($email))
+{
+  header('location: /contact/?error=invalidEmail');
+  exit();
+}
+
 // Get connection to the database
 require_once 'dbh.inc.php';
