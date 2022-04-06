@@ -1,4 +1,7 @@
 <?php
+
+require_once 'functions.inc.php';
+
 // Guard against missing form submission
 if (!isset($_POST['submit']))
 {
@@ -12,6 +15,13 @@ $email = $_POST['email'];
 $organization = $_POST['organization'];
 $role = $_POST['role'];
 $description = $_POST['description'];
+
+// Guard against empty form data
+if (emptyForm($name, $email, $organization, $role, $description))
+{
+  header('location: /contact/?error=emptyForm');
+  exit();
+}
 
 // Get connection to the database
 include 'dbh.inc.php';
