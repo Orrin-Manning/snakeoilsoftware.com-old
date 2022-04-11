@@ -4,7 +4,7 @@ $author = 'Orrin Manning';
 include_once 'header.php';
 ?>
 <main>
-  <h2>Affordable Software Development</h2>
+  <h1 class="section-header">Affordable Software Development</h1>
   <ul class="site-nav">
     <li>
       <a href="about">
