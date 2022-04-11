@@ -34,6 +34,10 @@ a:link, a:visited {
   text-decoration: inherit;
 }
 
+.copyright {
+  text-align: center;
+}
+
 .contact-header {
   text-align: center;
   color: #bc6e20;
