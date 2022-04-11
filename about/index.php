@@ -15,5 +15,5 @@ include_once '../header.php';
     <h2>Our Mission</h2>
   </section>
 </main>
-</body>
-</html>
+<?php
+require_once '../footer.php';

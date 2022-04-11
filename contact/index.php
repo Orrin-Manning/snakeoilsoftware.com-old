@@ -29,5 +29,5 @@ include_once '../header.php';
     </p>
   </section>
 </main>
-</body>
-</html>
+<?php
+require_once '../footer.php';
