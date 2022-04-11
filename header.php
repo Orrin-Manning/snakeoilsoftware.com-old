@@ -12,6 +12,11 @@
 <body>
   <header class="site-header">
     <a href="/">
-      <h1>Snake Oil Software</h1>
+      <h1>Snake Oil<br>Software</h1>
     </a>
+    <div class="menu-button">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
   </header>

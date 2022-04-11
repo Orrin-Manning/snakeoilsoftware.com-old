@@ -24,6 +24,11 @@ a:link, a:visited {
 }
 
 .site-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .85rem;
   font-family: "Rye", cursive;
   text-align: center;
   color: #bc2020;
@@ -32,6 +37,22 @@ a:link, a:visited {
 .site-header a {
   color: inherit;
   text-decoration: inherit;
+}
+
+.menu-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  right: 2rem;
+  min-height: 6vh;
+}
+
+.line {
+  width: 12vw;
+  height: 0.5vh;
+  border-radius: 0.25rem;
+  background: #ede9bd;
 }
 
 .copyright {
