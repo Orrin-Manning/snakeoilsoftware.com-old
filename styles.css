@@ -19,10 +19,6 @@ a:link, a:visited {
   list-style-type: none;
 }
 
-.site-nav-button-text {
-  text-align: center;
-}
-
 .site-header {
   position: relative;
   display: flex;
