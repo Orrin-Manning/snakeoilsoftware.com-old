@@ -1,5 +1,11 @@
+$bg: #131313;
+$fg: #ede9bd;
+$red: #bc2020;
+$orange: #bc6e20;
+$yellow: #ffea00;
+
 body {
-	background-color: #131313;
+	background-color: $bg;
 }
 
 p, label {
@@ -11,7 +17,7 @@ p, label {
 }
 
 a:link, a:visited {
-  color: #ffea00;
+  color: $yellow;
 }
 
 .site-nav {
@@ -27,7 +33,7 @@ a:link, a:visited {
   font-size: .85rem;
   font-family: "Rye", cursive;
   text-align: center;
-  color: #bc2020;
+  color: $red;
 }
 
 .site-header a {
@@ -48,7 +54,7 @@ a:link, a:visited {
   min-width: 2.5rem;
   height: 0.25rem;
   border-radius: 0.25rem;
-  background: #ede9bd;
+  background: $fg;
 }
 
 .copyright {
@@ -57,7 +63,7 @@ a:link, a:visited {
 
 .section-header {
   text-align: center;
-  color: #bc6e20;
+  color: $orange;
 }
 
 .contact-dialogue {
@@ -73,8 +79,8 @@ a:link, a:visited {
   flex-direction: column;
   margin: auto 0.5rem;
   padding:  1.5rem 1rem;
-  background-color: #111111;
-  border: solid 2px #bc6e20;
+  background-color: $bg;
+  border: solid 2px $orange;
   border-radius: 0.25rem;
 }
 
@@ -86,10 +92,10 @@ a:link, a:visited {
   font-size: 16px;
   min-height: 1.75rem;
   margin-bottom: 1rem;
-  border: solid 1px #ede9bd;
+  border: solid 1px $fg;
   border-radius: 0.25rem;
-  color: #ede9bd;
-  background-color: #0a0a0a;
+  color: $fg;
+  background-color: $bg;
 }
 
 .contact-submit-btn {
@@ -99,7 +105,7 @@ a:link, a:visited {
   padding: 0.5rem 1.5rem;
   border-width: 2px;
   border-radius: 0.25rem;
-  color:#bc2020;
-  background-color: #0a0a0a;
-  border-color: #bc2020;
+  color: $red;
+  background-color: $bg;
+  border-color: $red;
 }
