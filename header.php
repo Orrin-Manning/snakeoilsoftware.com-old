@@ -16,21 +16,34 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rye">
 </head>
 <body>
-  <header class="site-header">
-    <a href="/">
-      <h1>Snake Oil<br>Software</h1>
-    </a>
-    <div class="menu-button">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
+
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container">
+
+      <a href="/" class="navbar-brand">Snake Oil Software</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navmenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="/" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="/about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="/contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+
     </div>
-  </header>
-  <ul class="site-nav">
-    <li>
-      <a href="/about">About</a>
-    </li>
-    <li>
-      <a href="/contact">Contact</a>
-    </li>
-  </ul>
+  </nav>
