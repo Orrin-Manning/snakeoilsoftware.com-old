@@ -17,33 +17,30 @@
 </head>
 <body class="bg-dark">
 
-  <nav class="navbar navbar-expand-md navbar-dark">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-md navbar-dark px-3">
+    <a href="/" class="navbar-brand">Snake Oil Software</a>
 
-      <a href="/" class="navbar-brand">Snake Oil Software</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navmenu"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navmenu"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navmenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a href="/" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="/about" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="/contact" class="nav-link">Contact</a>
-          </li>
-        </ul>
-      </div>
-
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a href="/" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="/contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
     </div>
+
   </nav>
