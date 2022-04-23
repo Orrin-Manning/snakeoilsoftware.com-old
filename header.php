@@ -1,3 +1,6 @@
+<?php
+  require_once $_SERVER['DOCUMENT_ROOT'].'/includes/functions.inc.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,13 +35,13 @@
     <div class="collapse navbar-collapse" id="navmenu">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
+          <?php insertNavLink('Home', '/') ?>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
+          <?php insertNavLink('Contact', '/contact') ?>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
+          <?php insertNavLink('About', '/about') ?>
         </li>
       </ul>
     </div>
