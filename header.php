@@ -18,7 +18,7 @@
 <body class="bg-dark">
 
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-    <div class="container">
+    <div class="container-fluid">
 
       <a href="/" class="navbar-brand">Snake Oil Software</a>
 
