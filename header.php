@@ -26,24 +26,31 @@
     <button
       class="navbar-toggler"
       type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navmenu"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navmenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <?php insertNavLink('Home', '/') ?>
-        </li>
-        <li class="nav-item">
-          <?php insertNavLink('Contact', '/contact') ?>
-        </li>
-        <li class="nav-item">
-          <?php insertNavLink('About', '/about') ?>
-        </li>
-      </ul>
+    <div class="offcanvas offcanvas-end text-light bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navigation</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <?php insertNavLink('Home', '/') ?>
+          </li>
+          <li class="nav-item">
+            <?php insertNavLink('Contact', '/contact') ?>
+          </li>
+          <li class="nav-item">
+            <?php insertNavLink('About', '/about') ?>
+          </li>
+        </ul>
+      </div>
     </div>
 
   </nav>
