@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="/stylesheets/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rye">
 </head>
-<body>
+<body class="bg-dark">
 
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
     <div class="container">
