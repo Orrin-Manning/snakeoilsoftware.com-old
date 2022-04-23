@@ -32,13 +32,13 @@
     <div class="collapse navbar-collapse" id="navmenu">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a href="/" class="nav-link">Home</a>
+          <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a href="/about" class="nav-link">About</a>
+          <a class="nav-link" href="/about">About</a>
         </li>
         <li class="nav-item">
-          <a href="/contact" class="nav-link">Contact</a>
+          <a class="nav-link" href="/contact">Contact</a>
         </li>
       </ul>
     </div>
