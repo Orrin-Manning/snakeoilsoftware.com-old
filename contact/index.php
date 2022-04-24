@@ -1,7 +1,7 @@
 <?php
-$title = 'Contact Us';
-$author = 'Orrin Manning';
-include_once '../header.php';
+  $title = 'Contact Us';
+  $author = 'Orrin Manning';
+  include_once '../header.php';
 ?>
 <main>
   <h1 class="section-header serif">Contact Us</h1>
@@ -13,7 +13,7 @@ include_once '../header.php';
       your business needs.
     </p>
     <?php
-    include_once 'form.php';
+      include_once 'form.php';
     ?>
   </section>
 
@@ -30,4 +30,4 @@ include_once '../header.php';
   </section>
 </main>
 <?php
-require_once '../footer.php';
+  require_once '../footer.php';
