@@ -16,43 +16,6 @@ a:link, a:visited {
   color: $yellow;
 }
 
-.site-nav {
-  padding: 0;
-  list-style-type: none;
-}
-
-.site-header {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: .85rem;
-  font-family: "Rye", cursive;
-  text-align: center;
-  color: $red;
-}
-
-.site-header a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-.menu-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: absolute;
-  right: 2rem;
-  min-height: 2rem;
-}
-
-.line {
-  min-width: 2.5rem;
-  height: 0.25rem;
-  border-radius: 0.25rem;
-  background: $fg;
-}
-
 .copyright {
   text-align: center;
 }
