@@ -17,6 +17,15 @@
   >
   <link rel="stylesheet" href="/stylesheets/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rye">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXQXPK9159"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-NXQXPK9159');
+  </script>
 </head>
 <body class="bg-dark">
 
