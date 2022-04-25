@@ -27,7 +27,7 @@
     gtag('config', 'G-NXQXPK9159');
   </script>
 </head>
-<body class="bg-dark">
+<body class="bg-dark text-light">
 
   <nav class="navbar navbar-expand-md navbar-dark px-3">
     <a href="/" class="navbar-brand">Snake Oil Software</a>
