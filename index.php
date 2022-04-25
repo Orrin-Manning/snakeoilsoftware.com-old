@@ -16,14 +16,14 @@
       standards.
     </p>
   </section>
-  <div class="card text-dark p-4 mb-4">
+  <div class="card text-dark px-2 py-4 mb-4">
     <h3 class="text-center">Let's get in touch!</h3>
     <p>
       We would love to hear more about you and the technological needs of your
       business! Complete the form on our contact page so we can reach out to
       you and establish a personalized plan of action.
     </p>
-    <div class="d-grid col-6 mx-auto mb-2">
+    <div class="d-grid col-6 mx-auto">
       <a class="btn btn-dark" href="/contact">Contact Us Today</a>
     </div>
   </section>
