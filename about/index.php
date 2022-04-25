@@ -1,7 +1,7 @@
 <?php
   $title = 'About Snake Oil Software';
   $author = 'Orrin Manning';
-  include_once '../header.php';
+  require_once $_SERVER['DOCUMENT_ROOT'].'/header.php';
 ?>
 <main>
   <section>
@@ -16,4 +16,4 @@
   </section>
 </main>
 <?php
-  require_once '../footer.php';
+  require_once $_SERVER['DOCUMENT_ROOT'].'/footer.php';
