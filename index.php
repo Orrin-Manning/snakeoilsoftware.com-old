@@ -11,9 +11,8 @@
       <span class="fw-bolder fst-italic">Lubbock, Texas</span>
       with the aim of providing hands-on development services to individuals
       and small businesses in the west Texas region. The last few years have
-      shown us all how critically necessary a digital presence is, and we want
-      to help bring you or your business up to date with the current industry
-      standards.
+      shown us all how vital a digital presence is, and we want to help bring
+      you or your business up to date with the current industry standards.
     </p>
   </section>
   <div class="card text-dark px-2 py-4 mb-4">
