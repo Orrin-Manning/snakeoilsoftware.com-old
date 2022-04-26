@@ -3,6 +3,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title><?php echo $title ?></title>
   <meta name="author" content="<?php echo $author ?>">
@@ -23,10 +24,10 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
     gtag('config', 'G-NXQXPK9159');
   </script>
 </head>
+
 <body class="bg-dark text-light">
 
   <nav class="navbar navbar-expand-md navbar-dark px-3">
