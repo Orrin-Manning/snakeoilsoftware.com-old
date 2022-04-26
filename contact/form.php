@@ -1,4 +1,4 @@
-<form action="includes/form.inc.php" method="post" class="contact-form" id="contact-form">
+<form action="includes/form.inc.php" method="post" class="contact-form text-dark" id="contact-form">
   <div class="form-floating mb-3">
     <input class="form-control" id="name" type="text" name="name" placeholder="John Doe" form="contact-form">
     <label class="form-label" for="name">Name</label>
