@@ -7,7 +7,7 @@
       class="nav-link<?= ($currentPath == $linkPath) ? ' active' : '' ?>"
       href="<?= $linkPath ?>"
       <?php if($currentPath == $linkPath) { ?>
-      aria-current="page"
+        aria-current="page"
       <?php } ?>
     >
       <?= $linkName ?>
