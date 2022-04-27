@@ -32,3 +32,13 @@
   
   // Get connection to the database
   require_once 'dbh.inc.php';
+
+  // Prepare statement
+  $stmt = $mysqli->prepare('INSERT INTO contacts(name, email, organization, role, description) VALUES (?, ?, ?, ?, ?)');
+
+  // Bind and execute prepared statement
+  $stmt->bind_param('sssss', $name, $email, $organization, $role, $description);
+  $stmt->execute();
+
+  // Return user to the contact page
+  header('location: /contact/?status=success');
