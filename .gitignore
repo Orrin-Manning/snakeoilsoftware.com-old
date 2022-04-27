@@ -3,3 +3,4 @@
 dbAccess.inc.php
 phpmyadmin
 stylesheets/
+.database.ini
