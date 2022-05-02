@@ -5,14 +5,14 @@
 ?>
 <main>
   <section>
-    <h1>Who We Are</h1>
-    <p>
+    <h1 class="text-center">Who We Are</h1>
+    <p class="text-center">
       Snake Oil Software was founded by a mix of Texas Tech students and
       Lubbock locals.
     </p>
   </section>
   <section>
-    <h1>Our Mission</h1>
+    <h1 class="text-center">Our Mission</h1>
   </section>
 </main>
 <?php
