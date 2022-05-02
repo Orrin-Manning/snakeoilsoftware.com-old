@@ -4,9 +4,9 @@
   require_once $_SERVER['DOCUMENT_ROOT'].'/header.php';
 ?>
 <main>
-  <h1 class="section-header serif">Contact Us</h1>
+  <h1>Contact Us</h1>
   <section>
-    <p class="contact-dialogue serif">
+    <p>
       Due to the varied technological needs of our clients, service will be
       evaluated on a case-by-case basis. Please complete this questionnaire,
       and we will reach out to you to create a personalized plan of action for
@@ -18,10 +18,10 @@
   </section>
 
   <section>
-    <p class="contact-dialogue serif">
+    <p>
       You may also contact us via email and we will be happy to answer any questions you may have.
     </p>
-    <p class="serif">
+    <p>
       Email:
       <a href="mailto:orrin.manning@protonmail.com">
         orrin.manning@protonmail.com
