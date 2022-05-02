@@ -6,3 +6,4 @@ phpMyAdmin
 stylesheets/
 .database.ini
 node_modules
+dist
