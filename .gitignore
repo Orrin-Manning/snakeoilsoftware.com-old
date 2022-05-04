@@ -1,5 +1,6 @@
 .DS_Store
 .vscode/
+.next/
 dbAccess.inc.php
 phpmyadmin
 phpMyAdmin
