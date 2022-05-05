@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
-      <main className="container bg-dark text-light">
+      <main className="container">
         <section className="mx-2">
           <h1 className="display-6 text-center">
             Independent Website and Mobile App Development
