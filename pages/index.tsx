@@ -1,10 +1,8 @@
 import Link from "next/link";
-import SiteNav from "./components/sitenav";
 
 export default function Home() {
   return (
     <div>
-      <SiteNav />
       <main className="container bg-dark text-light">
         <section className="mx-2">
           <h1 className="display-6 text-center">
