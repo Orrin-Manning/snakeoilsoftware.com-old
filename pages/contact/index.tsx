@@ -1,4 +1,5 @@
 import Container from "react-bootstrap/Container";
+import Card from "react-bootstrap/Card";
 import ContactForm from "../../components/contactForm";
 
 export default function Contact() {
@@ -16,6 +17,7 @@ export default function Contact() {
       </section>
 
       <Card body className="text-dark">
+        <Card.Title>Have Questions?</Card.Title>
         <Card.Text>
           You may also contact us via email and we will be happy to answer any
           questions you may have.
