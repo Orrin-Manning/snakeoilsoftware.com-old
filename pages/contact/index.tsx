@@ -21,7 +21,7 @@ export default function Contact() {
           questions you may have.
         </p>
         <p>
-          Email:
+          Email:&ensp;
           <a href="mailto:orrin.manning@protonmail.com">
             orrin.manning@protonmail.com
           </a>
