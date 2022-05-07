@@ -1,9 +1,9 @@
 import Link from "next/link";
-import Container from "react-bootstrap/Container";
 
 export default function Home() {
   return (
-    <Container as="main" className="px-4">
+    <main className="container">
+      <section className="mx-2">
         <h1 className="display-6 text-center">
           Independent Website and Mobile App Development
         </h1>
@@ -30,6 +30,6 @@ export default function Home() {
           </Link>
         </div>
       </div>
-    </Container>
+    </main>
   );
 }
