@@ -3,10 +3,4 @@
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
 
-$offcanvas-bg-color: $dark;
-
-$nav-link-color: $light;
-$nav-link-hover-color: $white;
-
-@import "../node_modules/bootstrap/scss/offcanvas";
 @import "../node_modules/bootstrap/scss/nav";
