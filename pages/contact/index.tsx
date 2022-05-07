@@ -15,18 +15,18 @@ export default function Contact() {
         <ContactForm />
       </section>
 
-      <section>
-        <p>
+      <Card body className="text-dark">
+        <Card.Text>
           You may also contact us via email and we will be happy to answer any
           questions you may have.
-        </p>
-        <p>
+        </Card.Text>
+        <Card.Text>
           Email:&ensp;
-          <a href="mailto:orrin.manning@protonmail.com">
+          <Card.Link href="mailto:orrin.manning@protonmail.com">
             orrin.manning@protonmail.com
-          </a>
-        </p>
-      </section>
+          </Card.Link>
+        </Card.Text>
+      </Card>
     </Container>
   );
 }
