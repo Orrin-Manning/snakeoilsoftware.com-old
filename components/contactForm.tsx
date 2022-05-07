@@ -1,3 +1,4 @@
+import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
@@ -68,15 +69,18 @@ export default function ContactForm() {
           form="contact-form"
         />
       </FloatingLabel>
-      <Button
-        className="contact-submit-btn"
-        type="submit"
-        name="submit"
-        value="submit"
-        form="contact-form"
-      >
-        Submit
-      </Button>
+      <Container fluid className="text-center">
+        <Button
+          variant="light"
+          className="contact-submit-btn align-self-center"
+          type="submit"
+          name="submit"
+          value="submit"
+          form="contact-form"
+        >
+          Submit
+        </Button>
+      </Container>
     </Form>
   );
 }
