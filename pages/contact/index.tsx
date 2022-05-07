@@ -24,8 +24,8 @@ export default function Contact() {
         </Card.Text>
         <Card.Text>
           Email:&ensp;
-          <Card.Link href="mailto:orrin.manning@protonmail.com">
-            orrin.manning@protonmail.com
+          <Card.Link href="mailto:contact@snakeoilsoftware.com">
+            contact@snakeoilsoftware.com
           </Card.Link>
         </Card.Text>
       </Card>
