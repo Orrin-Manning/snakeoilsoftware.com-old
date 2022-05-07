@@ -1,3 +1,4 @@
+import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 
@@ -67,7 +68,7 @@ export default function ContactForm() {
           form="contact-form"
         />
       </FloatingLabel>
-      <button
+      <Button
         className="contact-submit-btn"
         type="submit"
         name="submit"
@@ -75,7 +76,7 @@ export default function ContactForm() {
         form="contact-form"
       >
         Submit
-      </button>
+      </Button>
     </Form>
   );
 }
