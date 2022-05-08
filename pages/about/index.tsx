@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 
 export default function About() {
   return (
-    <Container as="main">
+    <Container fluid as="main">
       <Container as="section">
         <h1 className="text-center">About Us</h1>
         <p>
