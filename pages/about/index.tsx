@@ -7,8 +7,12 @@ export default function About() {
         <section>
           <h1 className="text-center">About Us</h1>
           <p>
-            Snake Oil Software was founded by a mix of Texas Tech students and
-            Lubbock locals.
+            Snake Oil Software was founded by former Texas Tech students and
+            Lubbock locals. Our aim is to provide hands on software development
+            services to small businesses in the West Texas region. We believe
+            that proximity and open communication are crucial to satisying the
+            complex techincal needs of our clients. We stand behind our services
+            100% and pledge to deliver quality products.
           </p>
         </section>
         <section>
