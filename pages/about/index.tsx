@@ -5,7 +5,7 @@ export default function About() {
     <Container as="main">
       <main>
         <section>
-          <h1 className="text-center">Who We Are</h1>
+          <h1 className="text-center">About Us</h1>
           <p className="text-center">
             Snake Oil Software was founded by a mix of Texas Tech students and
             Lubbock locals.
