@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <Container as="main" className="px-4">
       <h1 className="text-center">Contact Us</h1>
-      <section className="mb-4">
+      <section className="mb-3">
         <p>
           Due to the varied technological needs of our clients, service will be
           evaluated on a case-by-case basis. Please complete this questionnaire,
