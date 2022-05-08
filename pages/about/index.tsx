@@ -14,9 +14,9 @@ export default function About() {
           pledge to deliver quality products.
         </p>
       </Container>
-      <section>
+      <Container as="section">
         <h1 className="text-center">Our Team</h1>
-      </section>
+      </Container>
     </Container>
   );
 }
