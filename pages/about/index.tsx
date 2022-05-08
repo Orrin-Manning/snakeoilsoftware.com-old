@@ -12,7 +12,7 @@ export default function About() {
           </p>
         </section>
         <section>
-          <h1 className="text-center">Our Mission</h1>
+          <h1 className="text-center">Our Team</h1>
         </section>
       </main>
     </Container>
