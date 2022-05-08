@@ -4,7 +4,7 @@ export default function About() {
   return (
     <Container as="main">
       <main>
-        <section>
+        <Container as="section">
           <h1 className="text-center">About Us</h1>
           <p>
             Snake Oil Software was founded by former Texas Tech students and
@@ -14,7 +14,7 @@ export default function About() {
             complex techincal needs of our clients. We stand behind our services
             100% and pledge to deliver quality products.
           </p>
-        </section>
+        </Container>
         <section>
           <h1 className="text-center">Our Team</h1>
         </section>
