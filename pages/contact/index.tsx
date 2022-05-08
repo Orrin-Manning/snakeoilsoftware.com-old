@@ -16,6 +16,8 @@ export default function Contact() {
         <ContactForm />
       </section>
 
+      <hr />
+
       <Card body className="text-dark mb-3">
         <Card.Title>Have Questions?</Card.Title>
         <Card.Text>
