@@ -4,7 +4,6 @@
 dbAccess.inc.php
 phpmyadmin
 phpMyAdmin
-styles/
 .database.ini
 node_modules
 dist
