@@ -4,7 +4,7 @@ import ContactForm from "../../components/contactForm";
 
 export default function Contact() {
   return (
-    <Container as="main" className="px-4">
+    <Container as="main">
       <h1 className="text-center">Contact Us</h1>
       <section className="mb-3">
         <p>
