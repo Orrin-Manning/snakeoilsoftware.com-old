@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import SiteNav from "../components/sitenav";
 import Footer from "../components/footer";
 
