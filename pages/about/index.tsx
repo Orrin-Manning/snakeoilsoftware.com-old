@@ -25,6 +25,7 @@ export default function About() {
             <Col xs={3}>
               <Image
                 src="/IMG_0465.jpg"
+                alt="Headshot of Orrin Manning"
                 layout="responsive"
                 width={128}
                 height={128}
