@@ -1,5 +1,11 @@
-export default function Footer() {
+interface FooterProps {
+  className: string;
+}
+
+export default function Footer(props: FooterProps) {
   return (
-    <p className="text-center">Copyright &copy; 2022 Snake Oil Software</p>
+    <p className={`text-center ${props.className}`}>
+      Copyright &copy; 2022 Snake Oil Software
+    </p>
   );
 }

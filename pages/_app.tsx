@@ -11,7 +11,7 @@ export default function SnakeOilSoftware({ Component, pageProps }) {
     <>
       <SiteNav />
       <Component {...pageProps} />
-      <Footer />
+      <Footer className="mt-3" />
     </>
   );
 }

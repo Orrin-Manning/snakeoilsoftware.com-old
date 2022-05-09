@@ -18,7 +18,7 @@ export default function Home() {
           standards.
         </p>
       </section>
-      <div className="card text-dark px-3 py-4 mb-4">
+      <div className="card text-dark px-3 py-4">
         <h3 className="text-center">Let's get in touch!</h3>
         <p>
           We would love to hear more about you and the technological needs of

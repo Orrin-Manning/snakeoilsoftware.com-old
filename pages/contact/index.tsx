@@ -18,7 +18,7 @@ export default function Contact() {
 
       <hr />
 
-      <Card body className="text-dark mb-3">
+      <Card body className="text-dark">
         <Card.Title>Have Questions?</Card.Title>
         <Card.Text>
           You may also contact us via email and we will be happy to answer any
