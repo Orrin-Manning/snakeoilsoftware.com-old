@@ -19,7 +19,7 @@ export default function Home() {
         </p>
       </section>
       <div className="card text-dark px-3 py-4">
-        <h3 className="text-center">Let's get in touch!</h3>
+        <h3 className="text-center">Let&apos;s get in touch!</h3>
         <p>
           We would love to hear more about you and the technological needs of
           your business! Complete the form on our contact page so we can reach
