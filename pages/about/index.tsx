@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 
 export default function About() {
   return (
-    <Container fluid as="main">
+    <main>
       <Container as="section">
         <h1 className="text-center">About Us</h1>
         <p>
@@ -17,6 +17,6 @@ export default function About() {
       <Container as="section">
         <h1 className="text-center">Our Team</h1>
       </Container>
-    </Container>
+    </main>
   );
 }
