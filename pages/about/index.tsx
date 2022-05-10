@@ -24,9 +24,9 @@ export default function About() {
           <Col md={6} lg={4}>
             <Card className="text-dark p-3">
               <Row className="align-items-center">
-                <Col xs={3}>
+                <Col xs={4}>
                   <Image
-                    src="/IMG_0465.jpg"
+                    src="/orrin-headshot.jpg"
                     alt="Headshot of Orrin Manning"
                     layout="responsive"
                     width={128}
@@ -35,7 +35,7 @@ export default function About() {
                   />
                 </Col>
                 <Col
-                  xs={9}
+                  xs={8}
                   className="d-flex flex-column justify-content-center ps-0"
                 >
                   <Card.Title>Orrin Manning</Card.Title>
