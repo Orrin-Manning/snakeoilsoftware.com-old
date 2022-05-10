@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <main>
+    <Container fluid as="main">
       <Container as="section">
         <h1 className="text-center">About Us</h1>
         <p>
@@ -48,6 +48,6 @@ export default function About() {
           </Card.Text>
         </Card>
       </Container>
-    </main>
+    </Container>
   );
 }
