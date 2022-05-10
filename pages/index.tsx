@@ -2,6 +2,8 @@ import Link from "next/link";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 export default function Home() {
   return (
@@ -22,17 +24,19 @@ export default function Home() {
           </p>
         </Col>
         <Col md>
-          <h3 className="text-center">Let&apos;s get in touch!</h3>
-          <p>
-            We would love to hear more about you and the technological needs of
-            your business! Complete the form on our contact page so we can reach
-            out to you and establish a personalized plan of action.
-          </p>
-          <div className="d-grid col-6 mx-auto">
-            <Link href="/contact">
-              <a className="btn btn-dark">Contact Us Today</a>
-            </Link>
-          </div>
+          <Card className="text-dark text-center px-3 py-4">
+            <Card.Title>Let&apos;s get in touch!</Card.Title>
+            <Card.Text>
+              We would love to hear more about you and the technological needs
+              of your business! Complete the form on our contact page so we can
+              reach out to you and establish a personalized plan of action.
+            </Card.Text>
+            <Container fluid className="text-center">
+              <Link href="/contact" passHref>
+                <Button variant="dark">Contact Us Today</Button>
+              </Link>
+            </Container>
+          </Card>
         </Col>
       </Row>
     </Container>
