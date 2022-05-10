@@ -72,7 +72,7 @@ export default function ContactForm() {
       <Container fluid className="text-center">
         <Button
           variant="light"
-          className="contact-submit-btn align-self-center"
+          className="contact-submit-btn"
           type="submit"
           name="submit"
           value="submit"
