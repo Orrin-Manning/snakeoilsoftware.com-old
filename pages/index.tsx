@@ -10,7 +10,7 @@ export default function Home() {
         Independent Website and Mobile App Development
       </h1>
       <Row>
-        <Col lg className="mx-2">
+        <Col md>
           <p>
             Snake Oil Software is proudly owned and operated in
             <span className="fw-bolder fst-italic">Lubbock, Texas</span>
@@ -21,7 +21,7 @@ export default function Home() {
             industry standards.
           </p>
         </Col>
-        <Col lg className="card text-dark px-3 py-4">
+        <Col md>
           <h3 className="text-center">Let&apos;s get in touch!</h3>
           <p>
             We would love to hear more about you and the technological needs of
