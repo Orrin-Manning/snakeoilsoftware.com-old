@@ -11,8 +11,8 @@ export default function Home() {
       <h1 className="display-6 text-center">
         Independent Website and Mobile App Development
       </h1>
-      <Row>
-        <Col md>
+      <Row className="justify-content-around">
+        <Col md={6}>
           <p>
             Snake Oil Software is proudly owned and operated in
             <span className="fw-bolder fst-italic">Lubbock, Texas</span>
@@ -23,7 +23,7 @@ export default function Home() {
             industry standards.
           </p>
         </Col>
-        <Col md>
+        <Col md={5}>
           <Card className="text-dark text-center px-3 py-4">
             <Card.Title>Let&apos;s get in touch!</Card.Title>
             <Card.Text>
