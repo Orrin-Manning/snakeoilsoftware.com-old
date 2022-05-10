@@ -24,19 +24,23 @@ export default function Contact() {
 
       <hr />
 
-      <Card body className="text-dark">
-        <Card.Title>Have Questions?</Card.Title>
-        <Card.Text>
-          You may also contact us via email and we will be happy to answer any
-          questions you may have.
-        </Card.Text>
-        <Card.Text>
-          Email:&ensp;
-          <Card.Link href="mailto:contact@snakeoilsoftware.com">
-            contact@snakeoilsoftware.com
-          </Card.Link>
-        </Card.Text>
-      </Card>
+      <Row className="justify-content-center">
+        <Col md={8} lg={5}>
+          <Card body className="text-dark">
+            <Card.Title>Have Questions?</Card.Title>
+            <Card.Text>
+              You may also contact us via email and we will be happy to answer
+              any questions you may have.
+            </Card.Text>
+            <Card.Text>
+              Email:&ensp;
+              <Card.Link href="mailto:contact@snakeoilsoftware.com">
+                contact@snakeoilsoftware.com
+              </Card.Link>
+            </Card.Text>
+          </Card>
+        </Col>
+      </Row>
     </Container>
   );
 }
