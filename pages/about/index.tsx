@@ -23,7 +23,7 @@ export default function About() {
         <Row>
           <Col md={6} lg={4}>
             <Card className="text-dark p-3">
-              <Row>
+              <Row className="align-items-center">
                 <Col xs={3}>
                   <Image
                     src="/IMG_0465.jpg"
