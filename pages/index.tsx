@@ -4,10 +4,10 @@ import Container from "react-bootstrap/Container";
 export default function Home() {
   return (
     <Container as="main">
+      <h1 className="display-6 text-center">
+        Independent Website and Mobile App Development
+      </h1>
       <section className="mx-2">
-        <h1 className="display-6 text-center">
-          Independent Website and Mobile App Development
-        </h1>
         <p>
           Snake Oil Software is proudly owned and operated in
           <span className="fw-bolder fst-italic">Lubbock, Texas</span>
