@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 
 export default function Home() {
   return (
-    <Container as="main">
+    <Container fluid as="main">
       <h1 className="display-6 text-center">
         Independent Website and Mobile App Development
       </h1>
