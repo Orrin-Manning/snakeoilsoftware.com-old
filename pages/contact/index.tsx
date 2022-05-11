@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -7,6 +8,9 @@ import ContactForm from "../../components/contactForm";
 export default function Contact() {
   return (
     <Container as="main">
+      <Head>
+        <title>Contact Us</title>
+      </Head>
       <h1 className="text-center">Contact Us</h1>
       <Row as="section" className="justify-content-around mb-3">
         <Col md={12} lg={4}>

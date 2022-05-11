@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -7,6 +8,9 @@ import Image from "next/image";
 export default function About() {
   return (
     <Container fluid as="main">
+      <Head>
+        <title>About Snake Oil Software</title>
+      </Head>
       <Container as="section">
         <h1 className="text-center">About Us</h1>
         <p>

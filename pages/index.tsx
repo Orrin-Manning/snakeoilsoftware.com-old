@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -8,6 +9,9 @@ import Button from "react-bootstrap/Button";
 export default function Home() {
   return (
     <Container fluid as="main">
+      <Head>
+        <title>Snake Oil Software</title>
+      </Head>
       <h1 className="display-6 text-center">
         Independent Website and Mobile App Development
       </h1>
