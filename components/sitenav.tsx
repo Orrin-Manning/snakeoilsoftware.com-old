@@ -7,10 +7,10 @@ import NavbarToggle from "react-bootstrap/NavbarToggle";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
 export default function SiteNav() {
-  let [show, setShow] = useState(false);
+  let [expanded, setExpanded] = useState(false);
 
-  const handleShow = () => setShow(true);
-  const handleHide = () => setShow(false);
+  const handleShow = () => setExpanded(true);
+  const handleHide = () => setExpanded(false);
 
   const siteMap = [
     {
@@ -30,13 +30,14 @@ export default function SiteNav() {
   return (
     <Navbar
       expand="md"
+      expanded={expanded}
       collapseOnSelect
       variant="dark"
       bg="dark"
       className="p-3"
     >
       <Link href="/" passHref>
-        <Navbar.Brand>Snake Oil Software</Navbar.Brand>
+        <Navbar.Brand onClick={handleHide}>Snake Oil Software</Navbar.Brand>
       </Link>
       <NavbarToggle onClick={handleShow} />
       <Navbar.Collapse>
