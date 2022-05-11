@@ -5,8 +5,6 @@ import SiteNav from "../components/sitenav";
 import Footer from "../components/footer";
 
 export default function SnakeOilSoftware({ Component, pageProps }) {
-  useEffect(() => document.body.classList.add("bg-dark", "text-light"));
-
   return (
     <>
       <SiteNav />
