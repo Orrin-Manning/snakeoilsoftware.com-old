@@ -10,7 +10,6 @@ export default function SiteNav() {
 
   const router = useRouter();
 
-  const handleShow = () => setExpanded(true);
   const handleHide = () => setExpanded(false);
   const handleToggle = () => setExpanded((prev) => !prev);
 
