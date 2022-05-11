@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
@@ -8,6 +9,8 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 
 export default function SiteNav() {
   let [expanded, setExpanded] = useState(false);
+
+  const router = useRouter();
 
   const handleShow = () => setExpanded(true);
   const handleHide = () => setExpanded(false);
@@ -42,7 +45,11 @@ export default function SiteNav() {
       </Link>
       <NavbarToggle onClick={handleToggle} />
       <Navbar.Collapse>
-        <Nav onSelect={handleHide} className="justify-content-end flex-grow-1">
+        <Nav
+          activeKey={router.pathname}
+          onSelect={handleHide}
+          className="justify-content-end flex-grow-1"
+        >
           {siteMap.map((link) => {
             return (
               <Link href={link.path} passHref key={link.name}>
