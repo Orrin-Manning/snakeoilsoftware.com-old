@@ -1,11 +1,9 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
-import Offcanvas from "react-bootstrap/Offcanvas";
 
 export default function SiteNav() {
   let [expanded, setExpanded] = useState(false);
