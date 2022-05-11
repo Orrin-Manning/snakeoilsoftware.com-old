@@ -11,6 +11,7 @@ export default function SiteNav() {
 
   const handleShow = () => setExpanded(true);
   const handleHide = () => setExpanded(false);
+  const handleToggle = () => setExpanded((prev) => !prev);
 
   const siteMap = [
     {
@@ -39,7 +40,7 @@ export default function SiteNav() {
       <Link href="/" passHref>
         <Navbar.Brand onClick={handleHide}>Snake Oil Software</Navbar.Brand>
       </Link>
-      <NavbarToggle onClick={handleShow} />
+      <NavbarToggle onClick={handleToggle} />
       <Navbar.Collapse>
         <Nav onSelect={handleHide} className="justify-content-end flex-grow-1">
           {siteMap.map((link) => {
