@@ -47,10 +47,10 @@ export default function SiteNav() {
           onSelect={handleHide}
           className="justify-content-end flex-grow-1"
         >
-          {siteMap.map((link) => {
+          {siteMap.map((page) => {
             return (
-              <Link href={link.path} passHref key={link.name}>
-                <Nav.Link>{link.name}</Nav.Link>
+              <Link href={page.path} passHref key={page.name}>
+                <Nav.Link>{page.name}</Nav.Link>
               </Link>
             );
           })}
