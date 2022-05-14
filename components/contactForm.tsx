@@ -1,9 +1,17 @@
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 
 export default function ContactForm() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    organization: "",
+    role: "",
+    description: "",
+  });
   return (
     <Form
       action="includes/form.inc.php"
@@ -15,6 +23,7 @@ export default function ContactForm() {
         <Form.Control
           type="text"
           name="name"
+          value={form.name}
           placeholder="John Doe"
         />
       </FloatingLabel>
@@ -22,6 +31,7 @@ export default function ContactForm() {
         <Form.Control
           type="email"
           name="email"
+          value={form.email}
           placeholder="name@example.com"
         />
       </FloatingLabel>
@@ -33,6 +43,7 @@ export default function ContactForm() {
         <Form.Control
           type="text"
           name="organization"
+          value={form.organization}
           placeholder="Company"
         />
       </FloatingLabel>
@@ -44,6 +55,7 @@ export default function ContactForm() {
         <Form.Control
           type="text"
           name="role"
+          value={form.role}
           placeholder="Technical Director"
         />
       </FloatingLabel>
@@ -55,6 +67,7 @@ export default function ContactForm() {
         <Form.Control
           type="text"
           name="description"
+          value={form.description}
           placeholder="Describe your needs here"
           as="textarea"
           style={{ height: "150px" }}
