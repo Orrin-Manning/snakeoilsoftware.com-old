@@ -16,12 +16,10 @@ export default function ContactForm() {
           type="text"
           name="name"
           placeholder="John Doe"
-          form="contact-form"
         />
       </FloatingLabel>
       <FloatingLabel label="Email Address" controlId="email" className="mb-3">
         <Form.Control
-          className="form-control"
           type="email"
           name="email"
           placeholder="name@example.com"
@@ -33,7 +31,6 @@ export default function ContactForm() {
         className="mb-3"
       >
         <Form.Control
-          className="form-control"
           type="text"
           name="organization"
           placeholder="Company"
@@ -45,7 +42,6 @@ export default function ContactForm() {
         className="form-floating mb-3"
       >
         <Form.Control
-          className="form-control"
           type="text"
           name="role"
           placeholder="Technical Director"
@@ -57,7 +53,6 @@ export default function ContactForm() {
         className="form-floating mb-3"
       >
         <Form.Control
-          className="form-control"
           type="text"
           name="description"
           placeholder="Describe your needs here"
