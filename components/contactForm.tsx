@@ -66,13 +66,7 @@ export default function ContactForm() {
         />
       </FloatingLabel>
       <Container fluid className="text-center">
-        <Button
-          variant="light"
-          className="contact-submit-btn"
-          type="submit"
-          name="submit"
-          value="submit"
-        >
+        <Button variant="light" type="submit">
           Submit
         </Button>
       </Container>
