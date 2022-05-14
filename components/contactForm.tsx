@@ -12,6 +12,17 @@ export default function ContactForm() {
     role: "",
     description: "",
   });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const target = e.target;
+    const name = target.name;
+    const value = target.value;
+
+    setForm((prevForm) => ({
+      ...prevForm,
+      [name]: value,
+    }));
+  };
   return (
     <Form
       action="includes/form.inc.php"
@@ -24,6 +35,7 @@ export default function ContactForm() {
           type="text"
           name="name"
           value={form.name}
+          onChange={handleChange}
           placeholder="John Doe"
         />
       </FloatingLabel>
@@ -32,6 +44,7 @@ export default function ContactForm() {
           type="email"
           name="email"
           value={form.email}
+          onChange={handleChange}
           placeholder="name@example.com"
         />
       </FloatingLabel>
@@ -44,6 +57,7 @@ export default function ContactForm() {
           type="text"
           name="organization"
           value={form.organization}
+          onChange={handleChange}
           placeholder="Company"
         />
       </FloatingLabel>
@@ -56,6 +70,7 @@ export default function ContactForm() {
           type="text"
           name="role"
           value={form.role}
+          onChange={handleChange}
           placeholder="Technical Director"
         />
       </FloatingLabel>
@@ -68,6 +83,7 @@ export default function ContactForm() {
           type="text"
           name="description"
           value={form.description}
+          onChange={handleChange}
           placeholder="Describe your needs here"
           as="textarea"
           style={{ height: "150px" }}
