@@ -25,7 +25,6 @@ export default function ContactForm() {
           type="email"
           name="email"
           placeholder="name@example.com"
-          form="contact-form"
         />
       </FloatingLabel>
       <FloatingLabel
@@ -38,7 +37,6 @@ export default function ContactForm() {
           type="text"
           name="organization"
           placeholder="Company"
-          form="contact-form"
         />
       </FloatingLabel>
       <FloatingLabel
@@ -51,7 +49,6 @@ export default function ContactForm() {
           type="text"
           name="role"
           placeholder="Technical Director"
-          form="contact-form"
         />
       </FloatingLabel>
       <FloatingLabel
@@ -66,7 +63,6 @@ export default function ContactForm() {
           placeholder="Describe your needs here"
           as="textarea"
           style={{ height: "150px" }}
-          form="contact-form"
         />
       </FloatingLabel>
       <Container fluid className="text-center">
@@ -76,7 +72,6 @@ export default function ContactForm() {
           type="submit"
           name="submit"
           value="submit"
-          form="contact-form"
         >
           Submit
         </Button>
