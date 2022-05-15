@@ -43,6 +43,16 @@ export default function ContactForm() {
     }));
   };
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const errs = formValidate();
+    if (Object.keys(errs).length === 0) {
+      postData(form);
+    } else {
+      setErrors({ errs });
+    }
+  };
+
   const formValidate = () => {
     let err: contactFormError = {};
     if (!form.name) err.name = "Name is required";
