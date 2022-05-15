@@ -19,7 +19,7 @@ const ContactSchema = new mongoose.Schema({
     ],
     maxlength: [64, "Organization name cannot be more than 64 characters"],
   },
-  Role: {
+  role: {
     type: String,
     required: [true, "Please provide your role in your organization"],
     maxlength: [64, "Role cannot be more than 64 characters"],
