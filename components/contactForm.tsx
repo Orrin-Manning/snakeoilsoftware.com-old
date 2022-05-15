@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
+import Spinner from "react-bootstrap/Spinner";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 
@@ -24,6 +25,7 @@ type contactFormError = {
 export default function ContactForm() {
   const router = useRouter();
   const contentType = "application/json";
+  const [submitting, setSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
   const [message, setMessage] = useState("");
 
@@ -70,6 +72,7 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSubmitting(true);
     const errs = formValidate();
     if (Object.keys(errs).length === 0) {
       postData(form);
@@ -156,7 +159,7 @@ export default function ContactForm() {
         </FloatingLabel>
         <Container fluid className="text-center">
           <Button variant="light" type="submit">
-            Submit
+            {submitting ? <Spinner animation="border" /> : "Submit"}
           </Button>
         </Container>
       </Form>
