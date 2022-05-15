@@ -88,76 +88,83 @@ export default function ContactForm() {
   };
 
   return (
-    <Form
-      action="includes/form.inc.php"
-      method="post"
-      className="contact-form text-dark"
-      id="contact-form"
-    >
-      <FloatingLabel label="Name" controlId="name" className="mb-3">
-        <Form.Control
-          type="text"
-          name="name"
-          value={form.name}
-          onChange={handleChange}
-          placeholder="John Doe"
-        />
-      </FloatingLabel>
-      <FloatingLabel label="Email Address" controlId="email" className="mb-3">
-        <Form.Control
-          type="email"
-          name="email"
-          value={form.email}
-          onChange={handleChange}
-          placeholder="name@example.com"
-        />
-      </FloatingLabel>
-      <FloatingLabel
-        label="Organization"
-        controlId="organization"
-        className="mb-3"
+    <>
+      <Form
+        onSubmit={handleSubmit}
+        className="contact-form text-dark"
+        id="contact-form"
       >
-        <Form.Control
-          type="text"
-          name="organization"
-          value={form.organization}
-          onChange={handleChange}
-          placeholder="Company"
-        />
-      </FloatingLabel>
-      <FloatingLabel
-        label="Role"
-        controlId="role"
-        className="form-floating mb-3"
-      >
-        <Form.Control
-          type="text"
-          name="role"
-          value={form.role}
-          onChange={handleChange}
-          placeholder="Technical Director"
-        />
-      </FloatingLabel>
-      <FloatingLabel
-        label="Description"
-        controlId="description"
-        className="form-floating mb-3"
-      >
-        <Form.Control
-          type="text"
-          name="description"
-          value={form.description}
-          onChange={handleChange}
-          placeholder="Describe your needs here"
-          as="textarea"
-          style={{ height: "150px" }}
-        />
-      </FloatingLabel>
-      <Container fluid className="text-center">
-        <Button variant="light" type="submit">
-          Submit
-        </Button>
-      </Container>
-    </Form>
+        <FloatingLabel label="Name" controlId="name" className="mb-3">
+          <Form.Control
+            type="text"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            placeholder="John Doe"
+          />
+        </FloatingLabel>
+        <FloatingLabel label="Email Address" controlId="email" className="mb-3">
+          <Form.Control
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            placeholder="name@example.com"
+          />
+        </FloatingLabel>
+        <FloatingLabel
+          label="Organization"
+          controlId="organization"
+          className="mb-3"
+        >
+          <Form.Control
+            type="text"
+            name="organization"
+            value={form.organization}
+            onChange={handleChange}
+            placeholder="Company"
+          />
+        </FloatingLabel>
+        <FloatingLabel
+          label="Role"
+          controlId="role"
+          className="form-floating mb-3"
+        >
+          <Form.Control
+            type="text"
+            name="role"
+            value={form.role}
+            onChange={handleChange}
+            placeholder="Technical Director"
+          />
+        </FloatingLabel>
+        <FloatingLabel
+          label="Description"
+          controlId="description"
+          className="form-floating mb-3"
+        >
+          <Form.Control
+            type="text"
+            name="description"
+            value={form.description}
+            onChange={handleChange}
+            placeholder="Describe your needs here"
+            as="textarea"
+            style={{ height: "150px" }}
+          />
+        </FloatingLabel>
+        <Container fluid className="text-center">
+          <Button variant="light" type="submit">
+            Submit
+          </Button>
+        </Container>
+      </Form>
+      <p>{message}</p>
+      <div>
+        {Object.keys(errors).map((err, index) => (
+          <li key={index}>{err}</li>
+        ))}
+      </div>
+    </>
   );
 }
