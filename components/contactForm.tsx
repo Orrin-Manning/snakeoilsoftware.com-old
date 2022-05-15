@@ -23,6 +23,17 @@ export default function ContactForm() {
       [name]: value,
     }));
   };
+
+  const formValidate = () => {
+    let err: contactFormError = {};
+    if (!form.name) err.name = "Name is required";
+    if (!form.email) err.email = "Email is required";
+    if (!form.organization) err.organization = "Organization name is required";
+    if (!form.role) err.role = "Role is required";
+    if (!form.description) err.description = "Description is required";
+    return err;
+  };
+
   return (
     <Form
       action="includes/form.inc.php"
