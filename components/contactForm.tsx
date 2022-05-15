@@ -21,6 +21,8 @@ type contactFormError = {
 };
 
 export default function ContactForm() {
+  const router = useRouter();
+  const contentType = "application/json";
   const [errors, setErrors] = useState({});
   const [message, setMessage] = useState("");
 
@@ -31,6 +33,28 @@ export default function ContactForm() {
     role: "",
     description: "",
   });
+
+  const postData = async (form: contactForm) => {
+    try {
+      const res = await fetch("/api/contacts", {
+        method: "POST",
+        headers: {
+          Accept: contentType,
+          "Content-Type": contentType,
+        },
+        body: JSON.stringify(form),
+      });
+
+      // Throw error with status code in case Fetcch API req failed
+      if (!res.ok) {
+        throw new Error(res.status.toString());
+      }
+
+      router.push("/");
+    } catch (error) {
+      setMessage("Failed to add contact");
+    }
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const target = e.target;
