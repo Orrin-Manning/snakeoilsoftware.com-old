@@ -21,6 +21,9 @@ type contactFormError = {
 };
 
 export default function ContactForm() {
+  const [errors, setErrors] = useState({});
+  const [message, setMessage] = useState("");
+
   const [form, setForm] = useState({
     name: "",
     email: "",
