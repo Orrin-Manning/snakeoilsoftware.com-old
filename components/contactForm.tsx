@@ -4,6 +4,14 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 
+type contactForm = {
+  name: String;
+  email: String;
+  organization: String;
+  role: String;
+  description: String;
+};
+
 type contactFormError = {
   name?: String;
   email?: String;
