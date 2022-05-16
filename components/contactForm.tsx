@@ -159,7 +159,19 @@ export default function ContactForm() {
         </FloatingLabel>
         <Container fluid className="text-center">
           <Button variant="light" type="submit">
-            {submitting ? <Spinner animation="border" /> : "Submit"}
+            {submitting ? (
+              <>
+                <Spinner
+                  animation="border"
+                  size="sm"
+                  role="status"
+                  className="me-2"
+                />
+                Submitting...
+              </>
+            ) : (
+              "Submit"
+            )}
           </Button>
         </Container>
       </Form>
