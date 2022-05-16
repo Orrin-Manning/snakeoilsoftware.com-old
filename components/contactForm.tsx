@@ -24,6 +24,7 @@ type contactFormError = {
   organization?: String;
   role?: String;
   description?: String;
+  token?: String;
 };
 
 export default function ContactForm() {
@@ -88,7 +89,7 @@ export default function ContactForm() {
     e.preventDefault();
     setButtonDisabled(true);
     const errs = formValidate();
-    if (Object.keys(errs).length === 0) {
+    if (Object.keys(errs).length === 0 && captchaToken) {
       setSubmitting(true);
       postData(form);
     } else {
@@ -104,6 +105,7 @@ export default function ContactForm() {
     if (!form.organization) err.organization = "Organization name is required";
     if (!form.role) err.role = "Role is required";
     if (!form.description) err.description = "Description is required";
+    if (!captchaToken) err.token = "ReCAPTCHA verification is required";
     return err;
   };
 
