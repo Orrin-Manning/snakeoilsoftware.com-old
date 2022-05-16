@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import Spinner from "react-bootstrap/Spinner";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
+import ReCAPTCHA from "react-google-recaptcha";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
@@ -40,6 +41,8 @@ export default function ContactForm() {
     role: "",
     description: "",
   });
+
+  const [captchaToken, setCaptchaToken] = useState<String | null>();
 
   const postData = async (form: contactForm) => {
     try {
@@ -172,9 +175,10 @@ export default function ContactForm() {
           />
         </FloatingLabel>
         <Container fluid className="d-flex flex-column align-items-center">
-          <div
-            className="g-recaptcha mb-3"
-            data-sitekey="6LdW1vMfAAAAAJItuEuUkHEE8guopluhCTJzgzzg"
+          <ReCAPTCHA
+            className="mb-3"
+            sitekey="6LdW1vMfAAAAAJItuEuUkHEE8guopluhCTJzgzzg"
+            onChange={(token) => setCaptchaToken(token)}
           />
           <Button variant="light" type="submit" disabled={buttonDissabled}>
             {submitted ? (
