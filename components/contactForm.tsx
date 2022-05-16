@@ -88,7 +88,7 @@ export default function ContactForm() {
       setSubmitting(true);
       postData(form);
     } else {
-      setErrors({ errs });
+      setErrors(errs);
       setButtonDisabled(false);
     }
   };
@@ -194,7 +194,7 @@ export default function ContactForm() {
       </Form>
       <p>{message}</p>
       <div>
-        {Object.keys(errors).map((err, index) => (
+        {Object.values(errors).map((err, index) => (
           <li key={index}>{err}</li>
         ))}
       </div>
