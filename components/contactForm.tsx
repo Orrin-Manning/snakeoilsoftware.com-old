@@ -28,6 +28,7 @@ export default function ContactForm() {
   const contentType = "application/json";
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [buttonDissabled, setButtonDisabled] = useState(false);
   const [errors, setErrors] = useState({});
   const [message, setMessage] = useState("");
 
@@ -57,9 +58,14 @@ export default function ContactForm() {
 
       setSubmitting(false);
       setSubmitted(true);
-      setTimeout(() => setSubmitted(false), 2000);
+      setTimeout(() => {
+        setSubmitted(false);
+        setButtonDisabled(false);
+      }, 2000);
     } catch (error) {
       setMessage("Failed to add contact");
+      setSubmitting(false);
+      setButtonDisabled(false);
     }
   };
 
@@ -76,12 +82,14 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitting(true);
+    setButtonDisabled(true);
     const errs = formValidate();
     if (Object.keys(errs).length === 0) {
+      setSubmitting(true);
       postData(form);
     } else {
       setErrors({ errs });
+      setButtonDisabled(false);
     }
   };
 
@@ -162,7 +170,7 @@ export default function ContactForm() {
           />
         </FloatingLabel>
         <Container fluid className="text-center">
-          <Button variant="light" type="submit">
+          <Button variant="light" type="submit" disabled={buttonDissabled}>
             {submitted ? (
               <>
                 <FontAwesomeIcon icon={faCircleCheck} className="me-2" />
