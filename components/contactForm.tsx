@@ -42,7 +42,7 @@ export default function ContactForm() {
     description: "",
   });
 
-  const [captchaToken, setCaptchaToken] = useState<String | null>();
+  const [captchaToken, setCaptchaToken] = useState<String | null>(null);
 
   const postData = async (form: contactForm) => {
     try {
