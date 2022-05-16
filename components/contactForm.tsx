@@ -45,7 +45,7 @@ export default function ContactForm() {
 
   const [captchaToken, setCaptchaToken] = useState<String | null>(null);
 
-  const postData = async (form: contactForm) => {
+  const postData = async (form: contactForm, captchaToken: String) => {
     try {
       const res = await fetch("/api/contacts", {
         method: "POST",
@@ -53,7 +53,10 @@ export default function ContactForm() {
           Accept: contentType,
           "Content-Type": contentType,
         },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          form: form,
+          token: captchaToken,
+        }),
       });
 
       // Throw error with status code in case Fetcch API req failed
@@ -91,7 +94,7 @@ export default function ContactForm() {
     const errs = formValidate();
     if (Object.keys(errs).length === 0 && captchaToken) {
       setSubmitting(true);
-      postData(form);
+      postData(form, captchaToken);
     } else {
       setErrors(errs);
       setButtonDisabled(false);
