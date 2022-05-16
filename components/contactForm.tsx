@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Script from "next/script";
 import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
@@ -105,6 +106,7 @@ export default function ContactForm() {
 
   return (
     <>
+      <Script src="https://www.google.com/recaptcha/api.js" async defer />
       <Form
         onSubmit={handleSubmit}
         className="contact-form text-dark"
@@ -169,7 +171,11 @@ export default function ContactForm() {
             style={{ height: "150px" }}
           />
         </FloatingLabel>
-        <Container fluid className="text-center">
+        <Container fluid className="d-flex flex-column align-items-center">
+          <div
+            className="g-recaptcha mb-2"
+            data-sitekey="6LdW1vMfAAAAAJItuEuUkHEE8guopluhCTJzgzzg"
+          />
           <Button variant="light" type="submit" disabled={buttonDissabled}>
             {submitted ? (
               <>
