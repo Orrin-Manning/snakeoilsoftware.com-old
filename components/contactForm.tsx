@@ -29,7 +29,7 @@ export default function ContactForm() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [buttonDissabled, setButtonDisabled] = useState(false);
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<contactFormError>({});
   const [message, setMessage] = useState("");
 
   const [form, setForm] = useState({
