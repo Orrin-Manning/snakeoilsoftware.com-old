@@ -5,6 +5,8 @@ import Button from "react-bootstrap/Button";
 import Spinner from "react-bootstrap/Spinner";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
 type contactForm = {
   name: String;
@@ -23,9 +25,9 @@ type contactFormError = {
 };
 
 export default function ContactForm() {
-  const router = useRouter();
   const contentType = "application/json";
   const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState({});
   const [message, setMessage] = useState("");
 
@@ -53,7 +55,9 @@ export default function ContactForm() {
         throw new Error(res.status.toString());
       }
 
-      router.push("/");
+      setSubmitting(false);
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 2000);
     } catch (error) {
       setMessage("Failed to add contact");
     }
@@ -159,7 +163,12 @@ export default function ContactForm() {
         </FloatingLabel>
         <Container fluid className="text-center">
           <Button variant="light" type="submit">
-            {submitting ? (
+            {submitted ? (
+              <>
+                <FontAwesomeIcon icon={faCircleCheck} className="me-2" />
+                Submitted!
+              </>
+            ) : submitting ? (
               <>
                 <Spinner
                   animation="border"
