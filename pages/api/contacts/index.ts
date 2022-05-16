@@ -17,12 +17,30 @@ export default async function handler(req, res) {
       }
       break;
     case "POST":
-      try {
-        /* Create new model in the database */
-        const contact = await Contact.create(req.body);
-        res.status(201).json({ success: true, data: contact });
-      } catch (err) {
-        res.status(400).json({ success: false });
+      const recaptchaURL = "https://www.google.com/recaptcha/api/siteverify";
+      const secret = process.env.RECAPTCHA_PRIV_KEY;
+      const token = req.body.token;
+
+      const result = await (
+        await fetch(recaptchaURL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: `secret=${secret}&response=${token}`,
+        })
+      ).json();
+
+      if (result.success) {
+        try {
+          /* Create new model in the database */
+          const contact = await Contact.create(req.body.form);
+          res.status(201).json({ success: true, data: contact });
+        } catch (err) {
+          res.status(400).json({ success: false });
+        }
+      } else {
+        res.status(400).json({ sucess: false });
       }
       break;
     default:
