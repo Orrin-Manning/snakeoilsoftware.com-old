@@ -1,6 +1,4 @@
-import { useRouter } from "next/router";
 import Head from "next/head";
-import Script from "next/script";
 import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
