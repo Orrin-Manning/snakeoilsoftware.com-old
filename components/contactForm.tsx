@@ -10,7 +10,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
 type contactForm = {
-  name: String;
+  firstname: String;
+  lastname: String;
   email: String;
   organization: String;
   role: String;
@@ -18,7 +19,8 @@ type contactForm = {
 };
 
 type contactFormError = {
-  name?: String;
+  firstname?: String;
+  lastname?: String;
   email?: String;
   organization?: String;
   role?: String;
@@ -35,7 +37,8 @@ export default function ContactForm() {
   const [message, setMessage] = useState("");
 
   const [form, setForm] = useState({
-    name: "",
+    firstname: "",
+    lastname: "",
     email: "",
     organization: "",
     role: "",
@@ -102,7 +105,8 @@ export default function ContactForm() {
 
   const formValidate = () => {
     let err: contactFormError = {};
-    if (!form.name) err.name = "Name is required";
+    if (!form.firstname) err.firstname = "First name is required";
+    if (!form.lastname) err.lastname = "Last name is required";
     if (!form.email) err.email = "Email is required";
     if (!form.organization) err.organization = "Organization name is required";
     if (!form.role) err.role = "Role is required";
@@ -126,13 +130,26 @@ export default function ContactForm() {
         className="contact-form text-dark"
         id="contact-form"
       >
-        <FloatingLabel label="Name" controlId="name" className="mb-3">
+        <FloatingLabel
+          label="First Name"
+          controlId="firstname"
+          className="mb-3"
+        >
           <Form.Control
             type="text"
-            name="name"
-            value={form.name}
+            name="firstname"
+            value={form.firstname}
             onChange={handleChange}
-            placeholder="John Doe"
+            placeholder="John"
+          />
+        </FloatingLabel>
+        <FloatingLabel label="Last Name" controlId="lastname" className="mb-3">
+          <Form.Control
+            type="text"
+            name="lastname"
+            value={form.lastname}
+            onChange={handleChange}
+            placeholder="Doe"
           />
         </FloatingLabel>
         <FloatingLabel label="Email Address" controlId="email" className="mb-3">
