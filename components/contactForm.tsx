@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Head from "next/head";
 import Script from "next/script";
 import { useState } from "react";
 import Container from "react-bootstrap/Container";
@@ -114,7 +115,14 @@ export default function ContactForm() {
 
   return (
     <>
-      <Script src="https://www.google.com/recaptcha/api.js" async defer />
+      <Head>
+        <link rel="preconnect" href="https://www.google.com" />
+        <link
+          rel="preconnect"
+          href="https://www.gstatic.com"
+          crossOrigin="anonymous"
+        />
+      </Head>
       <Form
         onSubmit={handleSubmit}
         className="contact-form text-dark"
