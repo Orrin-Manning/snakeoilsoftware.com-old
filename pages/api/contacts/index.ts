@@ -1,5 +1,21 @@
 import dbConnect from "../../../lib/dbConnect";
 import Contact from "../../../models/Contact";
+import sgMail from "@sendgrid/mail";
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const sendConfirmationEmail = ({ firstname, lastname, email }) => {
+  const msg = {
+    to: email,
+    from: "confirmation@snakeoilsoftware.com",
+    templateId: process.env.CONFIRMATION_TEMPLATE_ID,
+    dynamic_template_data: {
+      firstname: firstname,
+      lastname: lastname,
+    },
+  };
+
+  return sgMail.send(msg);
+};
 
 export default async function handler(req, res) {
   const { method } = req;
