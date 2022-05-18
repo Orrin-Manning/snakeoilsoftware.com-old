@@ -1,10 +1,15 @@
 import mongoose from "mongoose";
 
 const ContactSchema = new mongoose.Schema({
-  name: {
+  firstname: {
     type: String,
-    required: [true, "Please provide your name"],
-    maxlength: [64, "Name cannot be more than 64 characters"],
+    required: [true, "Please provide your first name"],
+    maxlength: [24, "First name cannot be more than 24 characters"],
+  },
+  lastname: {
+    type: String,
+    required: [true, "Please provide your last name"],
+    maxlength: [24, "Last name cannot be more than 24 characters"],
   },
   email: {
     type: String,
