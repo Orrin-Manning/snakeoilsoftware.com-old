@@ -18,8 +18,8 @@ export default function Home() {
       <Row className="justify-content-around">
         <Col md={6}>
           <p>
-            Snake Oil Software is proudly owned and operated in
-            <span className="fw-bolder fst-italic">Lubbock, Texas</span>
+            Snake Oil Software is proudly owned and operated in&nbsp;
+            <span className="fw-bolder fst-italic">Lubbock, Texas</span>&nbsp;
             with the aim of providing hands-on development services to
             individuals and small businesses in the west Texas region. The last
             few years have shown us all how vital a digital presence is, and we
