@@ -5,8 +5,14 @@ import sgMail from "@sendgrid/mail";
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const sendConfirmationEmail = ({ firstname, lastname, email }) => {
   const msg = {
-    to: email,
-    from: "confirmation@snakeoilsoftware.com",
+    to: {
+      name: `${firstname} ${lastname}`,
+      email: email,
+    },
+    from: {
+      name: "Snake Oil Software",
+      email: "confirmation@snakeoilsoftware.com",
+    },
     templateId: process.env.CONFIRMATION_TEMPLATE_ID,
     dynamic_template_data: {
       firstname: firstname,
@@ -51,6 +57,10 @@ export default async function handler(req, res) {
         try {
           /* Create new model in the database */
           const contact = await Contact.create(req.body.form);
+
+          /* Send confirmation email to user */
+          sendConfirmationEmail(contact);
+
           res.status(201).json({ success: true, data: contact });
         } catch (err) {
           res.status(400).json({ success: false });
