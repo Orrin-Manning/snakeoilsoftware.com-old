@@ -5,9 +5,11 @@ import Button from "react-bootstrap/Button";
 import Spinner from "react-bootstrap/Spinner";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
+import { Modal } from "react-bootstrap";
 import ReCAPTCHA from "react-google-recaptcha";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 type contactForm = {
   firstname: String;
@@ -33,6 +35,7 @@ export default function ContactForm() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [buttonDissabled, setButtonDisabled] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const [errors, setErrors] = useState<contactFormError>({});
   const [message, setMessage] = useState("");
 
@@ -68,10 +71,7 @@ export default function ContactForm() {
 
       setSubmitting(false);
       setSubmitted(true);
-      setTimeout(() => {
-        setSubmitted(false);
-        setButtonDisabled(false);
-      }, 2000);
+      setTimeout(() => setShowModal(true), 1000);
     } catch (error) {
       setMessage("Failed to add contact");
       setSubmitting(false);
@@ -236,6 +236,24 @@ export default function ContactForm() {
           <li key={index}>{err}</li>
         ))}
       </div>
+      <Modal show={showModal} centered className="text-dark">
+        <Modal.Header className="justify-content-center">
+          <Modal.Title>Thank you!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>
+            We have recieved your information and will be in touch shortly! You
+            should recieve a confirmation email in a few moments. If the email
+            doesn&apos;t show up, be sure to check your spam folder. In the
+            meantime, the button below will redirect you back to the homepage.
+          </p>
+          <Container fluid className="d-flex justify-content-center">
+            <Link href="/" passHref>
+              <Button variant="primary">Return Home</Button>
+            </Link>
+          </Container>
+        </Modal.Body>
+      </Modal>
     </>
   );
 }
