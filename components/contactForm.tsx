@@ -205,7 +205,7 @@ export default function ContactForm() {
         <Container fluid className="d-flex flex-column align-items-center">
           <ReCAPTCHA
             className="mb-3"
-            sitekey="6LdW1vMfAAAAAJItuEuUkHEE8guopluhCTJzgzzg"
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
             onChange={(token) => setCaptchaToken(token)}
           />
           <Button variant="light" type="submit" disabled={buttonDissabled}>
