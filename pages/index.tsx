@@ -12,11 +12,11 @@ export default function Home() {
       <Head>
         <title>Snake Oil Software</title>
       </Head>
-      <h1 className="display-6 text-center">
-        Independent Website and Mobile App Development
-      </h1>
       <Row className="justify-content-around">
         <Col md={6}>
+          <h1 className="display-6 text-center">
+            Independent Website and Mobile App Development
+          </h1>
           <p>
             Snake Oil Software is proudly owned and operated in&nbsp;
             <span className="fw-bolder fst-italic">Lubbock, Texas</span>&nbsp;
