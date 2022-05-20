@@ -23,6 +23,23 @@ const sendConfirmationEmail = ({ firstname, lastname, email }) => {
   return sgMail.send(msg);
 };
 
+const notifyTeam = async (contact) => {
+  const msg = {
+    to: {
+      name: "Orrin Manning",
+      email: "orrin@snakeoilsoftware.com",
+    },
+    from: {
+      name: "Notify API",
+      email: "notify@snakeoilsoftware.com",
+    },
+    templateId: "d-33aef198fb5a4462beab98e6084313c3",
+    dynamic_template_data: contact,
+  };
+
+  return sgMail.send(msg);
+};
+
 export default async function handler(req, res) {
   const { method } = req;
 
@@ -60,6 +77,7 @@ export default async function handler(req, res) {
 
           /* Send confirmation email to user */
           sendConfirmationEmail(contact);
+          notifyTeam(contact);
 
           res.status(201).json({ success: true, data: contact });
         } catch (err) {
