@@ -19,12 +19,12 @@ export default function Home() {
           </h1>
           <p className="lead">
             Snake Oil Software is proudly owned and operated in&nbsp;
-            <span className="fw-bolder fst-italic">Lubbock, Texas</span>&nbsp;
-            with the aim of providing hands-on development services to
-            individuals and small businesses in the west Texas region. The last
-            few years have shown us all how vital a digital presence is, and we
-            want to help bring you or your business up to date with the current
-            industry standards.
+            <span className="fst-italic">Lubbock, Texas</span>&nbsp; with the
+            aim of providing hands-on development services to individuals and
+            small businesses in the west Texas region. The last few years have
+            shown us all how vital a digital presence is, and we want to help
+            bring you or your business up to date with the current industry
+            standards.
           </p>
         </Col>
         <Col md={5}>
