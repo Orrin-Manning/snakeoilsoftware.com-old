@@ -37,7 +37,7 @@ export default function Home() {
             </Card.Text>
             <Container fluid className="text-center">
               <Link href="/contact" passHref>
-                <Button variant="dark">Contact Us Today</Button>
+                <Button variant="primary">Contact Us Today</Button>
               </Link>
             </Container>
           </Card>
