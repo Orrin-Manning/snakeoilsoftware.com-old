@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <Row className="justify-content-around">
         <Col md={6} className="text-center">
-          <h1 className="display-6">
+          <h1 className="display-5 fw-bold">
             Independent Website and Mobile App Development
           </h1>
           <p>
