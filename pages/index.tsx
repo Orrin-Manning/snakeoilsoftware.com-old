@@ -17,7 +17,7 @@ export default function Home() {
           <h1 className="display-5 fw-bold">
             Independent Website and Mobile App Development
           </h1>
-          <p>
+          <p className="lead">
             Snake Oil Software is proudly owned and operated in&nbsp;
             <span className="fw-bolder fst-italic">Lubbock, Texas</span>&nbsp;
             with the aim of providing hands-on development services to
