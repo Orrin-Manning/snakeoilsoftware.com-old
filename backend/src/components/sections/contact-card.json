@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_contact_cards",
+  "info": {
+    "displayName": "CTA",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    },
+    "button": {
+      "type": "string"
+    }
+  }
+}
