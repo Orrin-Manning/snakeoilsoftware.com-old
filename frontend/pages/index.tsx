@@ -25,15 +25,13 @@ const Home = ({ homepage }) => {
       <Row className="justify-content-center">
         <Col xs={11} sm={10} md={9} lg={8} xl={6} xxl={5}>
           <Card className="text-dark text-center px-3 py-4">
-            <Card.Title>Let&apos;s get in touch!</Card.Title>
-            <Card.Text>
-              We would love to hear more about you and the technological needs
-              of your business! Complete the form on our contact page so we can
-              reach out to you and establish a personalized plan of action.
-            </Card.Text>
+            <Card.Title>{homepage.attributes.cta.title}</Card.Title>
+            <Card.Text>{homepage.attributes.cta.body}</Card.Text>
             <Container fluid className="text-center">
               <Link href="/contact" passHref>
-                <Button variant="primary">Contact Us Today</Button>
+                <Button variant="primary">
+                  {homepage.attributes.cta.button}
+                </Button>
               </Link>
             </Container>
           </Card>
@@ -47,6 +45,7 @@ export async function getStaticProps() {
   const homepageRes = await fetchAPI("/homepage", {
     populate: {
       hero: "*",
+      cta: "*",
     },
   });
 
