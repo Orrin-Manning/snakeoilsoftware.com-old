@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_our_teams",
+  "info": {
+    "displayName": "Our Team",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "profiles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "cards.profile-card"
+    }
+  }
+}
