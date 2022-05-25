@@ -1,26 +1,20 @@
 import Head from "next/head";
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
-import Image from "next/image";
+import { fetchAPI } from "../../lib/api";
 
-export default function About() {
+const About = ({ about }) => {
   return (
     <Container fluid as="main">
       <Head>
         <title>About Snake Oil Software</title>
       </Head>
       <Container as="section">
-        <h1 className="text-center">About Us</h1>
-        <p>
-          Snake Oil Software was founded by former Texas Tech students and
-          Lubbock locals. Our aim is to provide hands on software development
-          services to small businesses in the West Texas region. We believe that
-          proximity and open communication are crucial to satisying the complex
-          techincal needs of our clients. We stand behind our services 100% and
-          pledge to deliver quality products.
-        </p>
+        <h1 className="text-center">{about.attributes.hero.heading}</h1>
+        <p>{about.attributes.hero.body}</p>
       </Container>
       <Container as="section">
         <h1 className="text-center">Our Team</h1>
@@ -58,4 +52,20 @@ export default function About() {
       </Container>
     </Container>
   );
+};
+
+export async function getStaticProps() {
+  const aboutRes = await fetchAPI("/about", {
+    populate: {
+      hero: "*",
+    },
+  });
+
+  return {
+    props: {
+      about: aboutRes.data,
+    },
+  };
 }
+
+export default About;
