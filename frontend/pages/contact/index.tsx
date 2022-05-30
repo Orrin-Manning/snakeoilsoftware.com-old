@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import ContactForm from "../../components/contactForm";
 
-export default function Contact() {
+const Contact = () => {
   return (
     <Container as="main">
       <Head>
@@ -47,4 +47,6 @@ export default function Contact() {
       </Row>
     </Container>
   );
-}
+};
+
+export default Contact;
