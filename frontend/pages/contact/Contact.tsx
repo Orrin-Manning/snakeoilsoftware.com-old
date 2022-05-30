@@ -4,22 +4,18 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import ContactForm from "../../components/contactForm";
+import { fetchAPI } from "../../lib/api";
 
-const Contact = () => {
+const Contact = ({ hero }) => {
   return (
     <Container as="main">
       <Head>
         <title>Contact Us</title>
       </Head>
-      <h1 className="text-center">Contact Us</h1>
+      <h1 className="text-center">{hero.heading}</h1>
       <Row as="section" className="justify-content-around mb-3">
         <Col md={12} lg={4}>
-          <p>
-            Due to the varied technological needs of our clients, service will
-            be evaluated on a case-by-case basis. Please complete this
-            questionnaire, and we will reach out to you to create a personalized
-            plan of action for your business needs.
-          </p>
+          <p>{hero.body}</p>
         </Col>
         <Col md={8} lg={6}>
           <ContactForm />
@@ -48,5 +44,20 @@ const Contact = () => {
     </Container>
   );
 };
+
+export async function getStaticProps() {
+  const contactRes = await fetchAPI("/contact", {
+    populate: {
+      hero: "*",
+    },
+  });
+  const { hero } = contactRes.data.attributes;
+
+  return {
+    props: {
+      hero: hero,
+    },
+  };
+}
 
 export default Contact;
