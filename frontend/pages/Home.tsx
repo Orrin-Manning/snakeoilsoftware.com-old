@@ -8,30 +8,24 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { fetchAPI } from "../lib/api";
 
-const Home = ({ homepage }) => {
+const Home = ({ hero, cta }) => {
   return (
     <Container fluid as="main">
       <Head>
         <title>Snake Oil Software</title>
       </Head>
       <Container className="text-center">
-        <h1 className="display-5 fw-bold">
-          {homepage.attributes.hero.heading}
-        </h1>
-        <ReactMarkdown className="lead">
-          {homepage.attributes.hero.body}
-        </ReactMarkdown>
+        <h1 className="display-5 fw-bold">{hero.heading}</h1>
+        <ReactMarkdown className="lead">{hero.body}</ReactMarkdown>
       </Container>
       <Row className="justify-content-center">
         <Col xs={11} sm={10} md={9} lg={8} xl={6} xxl={5}>
           <Card className="text-dark text-center px-3 py-4">
-            <Card.Title>{homepage.attributes.cta.title}</Card.Title>
-            <Card.Text>{homepage.attributes.cta.body}</Card.Text>
+            <Card.Title>{cta.title}</Card.Title>
+            <Card.Text>{cta.body}</Card.Text>
             <Container fluid className="text-center">
               <Link href="/contact" passHref>
-                <Button variant="primary">
-                  {homepage.attributes.cta.button}
-                </Button>
+                <Button variant="primary">{cta.button}</Button>
               </Link>
             </Container>
           </Card>
@@ -48,10 +42,12 @@ export async function getStaticProps() {
       cta: "*",
     },
   });
+  const { hero, cta } = homepageRes.data.attributes;
 
   return {
     props: {
-      homepage: homepageRes.data,
+      hero: hero,
+      cta: cta,
     },
   };
 }
