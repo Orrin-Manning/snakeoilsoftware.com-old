@@ -6,7 +6,7 @@ import Card from "react-bootstrap/Card";
 import ContactForm from "../../components/contactForm";
 import { fetchAPI } from "../../lib/api";
 
-const Contact = ({ hero }) => {
+const Contact = ({ hero, contactCard }) => {
   return (
     <Container as="main">
       <Head>
@@ -27,15 +27,12 @@ const Contact = ({ hero }) => {
       <Row className="justify-content-center">
         <Col md={8} lg={5}>
           <Card body className="text-dark">
-            <Card.Title>Have Questions?</Card.Title>
-            <Card.Text>
-              You may also contact us via email and we will be happy to answer
-              any questions you may have.
-            </Card.Text>
+            <Card.Title>{contactCard.heading}</Card.Title>
+            <Card.Text>{contactCard.body}</Card.Text>
             <Card.Text>
               Email:&ensp;
-              <Card.Link href="mailto:contact@snakeoilsoftware.com">
-                contact@snakeoilsoftware.com
+              <Card.Link href={`mailto:${contactCard.emailAddress}`}>
+                {contactCard.emailAddress}
               </Card.Link>
             </Card.Text>
           </Card>
@@ -49,13 +46,15 @@ export async function getStaticProps() {
   const contactRes = await fetchAPI("/contact", {
     populate: {
       hero: "*",
+      contactCard: "*",
     },
   });
-  const { hero } = contactRes.data.attributes;
+  const { hero, contactCard } = contactRes.data.attributes;
 
   return {
     props: {
       hero: hero,
+      contactCard: contactCard,
     },
   };
 }
