@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_cards_contact_cards",
+  "info": {
+    "displayName": "Contact Card",
+    "icon": "id-card-alt"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    },
+    "emailAddress": {
+      "type": "string"
+    }
+  }
+}
